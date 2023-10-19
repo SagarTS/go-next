@@ -1,8 +1,9 @@
 package models
 
-import "gorm.io/gorm"
-
 type TodoData struct{
-	gorm.Model
 	Todo string `json:"todo"`
+}
+
+func (t TodoData) TableName() string{
+	return "todo_list"
 }
