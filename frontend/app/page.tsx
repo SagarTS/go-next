@@ -7,7 +7,7 @@ export default function Home() {
   const [inputText, setInputText] = useState('');
 
   const handleTodoPost = async () => {
-    await API.post('/todos', inputText);
+    await API.post('/todos', { todo: inputText });
   };
 
   return (
