@@ -9,9 +9,12 @@ import (
 
 func RouterSetup() *gin.Engine{
 	r := gin.Default()
+
+	// allow all origins
 	r.Use(cors.Default())
 
 	r.POST("/todos", controllers.AddTodos)
+	r.GET("/todos", controllers.GetAllTodos)
 
 	return r;
 }
