@@ -15,6 +15,7 @@ func RouterSetup() *gin.Engine{
 
 	r.POST("/todos", controllers.AddTodos)
 	r.GET("/todos", controllers.GetAllTodos)
+	r.DELETE("/todo/:id", controllers.DeleteTodo)
 
 	return r;
 }
